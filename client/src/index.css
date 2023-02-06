@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-sans;
+  }
+
+}
+
+@layer components {
+  tbody:has(tr:hover) tr:not(:hover) {
+    @apply opacity-60;
+  }
+}
+
+@layer utilities {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #1f2937 #ffffff;
+  }
+
+  *::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+
+  *::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #1f2937;
+  }
+}
